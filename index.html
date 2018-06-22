@@ -5,17 +5,17 @@
   
 
   
-  <title>我的第一个博客</title>
+  <title>MY BLOG</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta property="og:type" content="website">
-<meta property="og:title" content="我的第一个博客">
+<meta property="og:title" content="MY BLOG">
 <meta property="og:url" content="http://yoursite.com/index.html">
-<meta property="og:site_name" content="我的第一个博客">
+<meta property="og:site_name" content="MY BLOG">
 <meta property="og:locale" content="zh-CN">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="我的第一个博客">
+<meta name="twitter:title" content="MY BLOG">
   
-    <link rel="alternate" href="/atom.xml" title="我的第一个博客" type="application/atom+xml">
+    <link rel="alternate" href="/atom.xml" title="MY BLOG" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.png">
@@ -34,7 +34,7 @@
   <div id="header-outer" class="outer">
     <div id="header-title" class="inner">
       <h1 id="logo-wrap">
-        <a href="/" id="logo">我的第一个博客</a>
+        <a href="/" id="logo">MY BLOG</a>
       </h1>
       
     </div>
@@ -61,6 +61,65 @@
 </header>
       <div class="outer">
         <section id="main">
+  
+    <article id="post-freemarker" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/06/22/freemarker/" class="article-date">
+  <time datetime="2018-06-22T06:24:12.162Z" itemprop="datePublished">2018-06-22</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/06/22/freemarker/">freemarker</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="spring整合freemark"><a href="#spring整合freemark" class="headerlink" title="spring整合freemark"></a>spring整合freemark</h2><p>applicationContext.xml中添加下图代码<br>!(freemarker/freemarker.PNG)</p>
+<h2 id="copy复制"><a href="#copy复制" class="headerlink" title="copy复制"></a>copy复制</h2><pre><code>&lt;bean id=&quot;freemarkerConfig&quot;  class=&quot;org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer&quot;&gt;    
+&lt;property name=&quot;templateLoaderPath&quot; value=&quot;/&quot;/&gt;
+&lt;property name=&quot;defaultEncoding&quot; value=&quot;utf-8&quot;/&gt;  
+&lt;property name=&quot;freemarkerSettings&quot;&gt;  
+&lt;props&gt;  
+    &lt;prop key=&quot;template_update_delay&quot;&gt;10&lt;/prop&gt;  
+    &lt;prop key=&quot;locale&quot;&gt;zh_CN&lt;/prop&gt;  
+    &lt;prop key=&quot;datetime_format&quot;&gt;yyyy-MM-dd HH:mm:ss&lt;/prop&gt;  
+    &lt;prop key=&quot;date_format&quot;&gt;yyyy-MM-dd&lt;/prop&gt;  
+    &lt;prop key=&quot;number_format&quot;&gt;#.##&lt;/prop&gt;  
+    &lt;prop key=&quot;classic_compatible&quot;&gt;true&lt;/prop&gt;  
+&lt;/props&gt;  
+&lt;/property&gt;  
+&lt;/bean&gt;  
+ &lt;!-- freemarker视图解析器 --&gt;  
+ &lt;bean class=&quot;org.springframework.web.servlet.view.freemarker.FreeMarkerViewResolver&quot;&gt;  
+    &lt;property name=&quot;suffix&quot; value=&quot;.html&quot; /&gt;  
+    &lt;property name=&quot;contentType&quot; value=&quot;text/html;charset=UTF-8&quot; /&gt;  
+    &lt;!-- 此变量值为pageContext.request, 页面使用方法：rc.contextPath --&gt;  
+    &lt;property name=&quot;requestContextAttribute&quot; value=&quot;rc&quot; /&gt;  
+&lt;/bean&gt; 
+</code></pre><h2 id="注意项"><a href="#注意项" class="headerlink" title="注意项"></a>注意项</h2><p>   templateLoaderPath路径需要设置正确，不然会报不能加载视图错误</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/06/22/freemarker/" data-id="cjiplmj5n0001t8dg8uiqcs0d" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
   
     <article id="post-date转json格式" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
@@ -90,7 +149,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/06/13/date转json格式/" data-id="cjichqif100064gdgfmhjf6rg" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/06/13/date转json格式/" data-id="cjiplmj570000t8dgj1hilcg0" class="article-share-link">Share</a>
       
       
     </footer>
@@ -127,45 +186,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/06/04/ngrok/" data-id="cjichqidq00014gdg9s16fdq5" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-tampermonkey" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/06/04/tampermonkey/" class="article-date">
-  <time datetime="2018-06-04T02:29:17.286Z" itemprop="datePublished">2018-06-04</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/06/04/tampermonkey/">tampermonkey(油猴子)</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="屏蔽百度广告"><a href="#屏蔽百度广告" class="headerlink" title="屏蔽百度广告"></a>屏蔽百度广告</h2><p><img src="/2018/06/04/tampermonkey/getscript.PNG" alt="显示异常"><br>More info <a href="https://blog.csdn.net/fkq_2016/article/details/78759244" target="_blank" rel="noopener">click</a></p>
-<p>##扩展:VIP视频破解</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/06/04/tampermonkey/" data-id="cjichqie600034gdgm4wrzcwb" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/06/04/ngrok/" data-id="cjiplmj620002t8dggyny89cw" class="article-share-link">Share</a>
       
       
     </footer>
@@ -211,6 +232,10 @@
       <ul>
         
           <li>
+            <a href="/2018/06/22/freemarker/">freemarker</a>
+          </li>
+        
+          <li>
             <a href="/2018/06/13/date转json格式/">date转json格式</a>
           </li>
         
@@ -224,10 +249,6 @@
         
           <li>
             <a href="/2018/06/04/picture/">picture</a>
-          </li>
-        
-          <li>
-            <a href="/2018/05/22/微信公众号/">微信公众号</a>
           </li>
         
       </ul>

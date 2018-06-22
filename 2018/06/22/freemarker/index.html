@@ -5,19 +5,19 @@
   
 
   
-  <title>微信公众号 | MY BLOG</title>
+  <title>freemarker | MY BLOG</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="第三方插件">
+  <meta name="description" content="spring整合freemarkapplicationContext.xml中添加下图代码!(freemarker/freemarker.PNG) copy复制&amp;lt;bean id=&amp;quot;freemarkerConfig&amp;quot;  class=&amp;quot;org.springframework.web.servlet.view.freemarker.FreeMarkerConfigur">
 <meta property="og:type" content="article">
-<meta property="og:title" content="微信公众号">
-<meta property="og:url" content="http://yoursite.com/2018/05/22/微信公众号/index.html">
+<meta property="og:title" content="freemarker">
+<meta property="og:url" content="http://yoursite.com/2018/06/22/freemarker/index.html">
 <meta property="og:site_name" content="MY BLOG">
-<meta property="og:description" content="第三方插件">
+<meta property="og:description" content="spring整合freemarkapplicationContext.xml中添加下图代码!(freemarker/freemarker.PNG) copy复制&amp;lt;bean id=&amp;quot;freemarkerConfig&amp;quot;  class=&amp;quot;org.springframework.web.servlet.view.freemarker.FreeMarkerConfigur">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-05-22T02:24:06.284Z">
+<meta property="og:updated_time" content="2018-06-22T06:30:11.380Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="微信公众号">
-<meta name="twitter:description" content="第三方插件">
+<meta name="twitter:title" content="freemarker">
+<meta name="twitter:description" content="spring整合freemarkapplicationContext.xml中添加下图代码!(freemarker/freemarker.PNG) copy复制&amp;lt;bean id=&amp;quot;freemarkerConfig&amp;quot;  class=&amp;quot;org.springframework.web.servlet.view.freemarker.FreeMarkerConfigur">
   
     <link rel="alternate" href="/atom.xml" title="MY BLOG" type="application/atom+xml">
   
@@ -64,10 +64,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-微信公众号" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-freemarker" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2018/05/22/微信公众号/" class="article-date">
-  <time datetime="2018-05-22T02:22:00.915Z" itemprop="datePublished">2018-05-22</time>
+    <a href="/2018/06/22/freemarker/" class="article-date">
+  <time datetime="2018-06-22T06:24:12.162Z" itemprop="datePublished">2018-06-22</time>
 </a>
     
   </div>
@@ -78,7 +78,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      微信公众号
+      freemarker
     </h1>
   
 
@@ -86,11 +86,34 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="第三方插件"><a href="#第三方插件" class="headerlink" title="第三方插件"></a>第三方插件</h2>
+        <h2 id="spring整合freemark"><a href="#spring整合freemark" class="headerlink" title="spring整合freemark"></a>spring整合freemark</h2><p>applicationContext.xml中添加下图代码<br>!(freemarker/freemarker.PNG)</p>
+<h2 id="copy复制"><a href="#copy复制" class="headerlink" title="copy复制"></a>copy复制</h2><pre><code>&lt;bean id=&quot;freemarkerConfig&quot;  class=&quot;org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer&quot;&gt;    
+&lt;property name=&quot;templateLoaderPath&quot; value=&quot;/&quot;/&gt;
+&lt;property name=&quot;defaultEncoding&quot; value=&quot;utf-8&quot;/&gt;  
+&lt;property name=&quot;freemarkerSettings&quot;&gt;  
+&lt;props&gt;  
+    &lt;prop key=&quot;template_update_delay&quot;&gt;10&lt;/prop&gt;  
+    &lt;prop key=&quot;locale&quot;&gt;zh_CN&lt;/prop&gt;  
+    &lt;prop key=&quot;datetime_format&quot;&gt;yyyy-MM-dd HH:mm:ss&lt;/prop&gt;  
+    &lt;prop key=&quot;date_format&quot;&gt;yyyy-MM-dd&lt;/prop&gt;  
+    &lt;prop key=&quot;number_format&quot;&gt;#.##&lt;/prop&gt;  
+    &lt;prop key=&quot;classic_compatible&quot;&gt;true&lt;/prop&gt;  
+&lt;/props&gt;  
+&lt;/property&gt;  
+&lt;/bean&gt;  
+ &lt;!-- freemarker视图解析器 --&gt;  
+ &lt;bean class=&quot;org.springframework.web.servlet.view.freemarker.FreeMarkerViewResolver&quot;&gt;  
+    &lt;property name=&quot;suffix&quot; value=&quot;.html&quot; /&gt;  
+    &lt;property name=&quot;contentType&quot; value=&quot;text/html;charset=UTF-8&quot; /&gt;  
+    &lt;!-- 此变量值为pageContext.request, 页面使用方法：rc.contextPath --&gt;  
+    &lt;property name=&quot;requestContextAttribute&quot; value=&quot;rc&quot; /&gt;  
+&lt;/bean&gt; 
+</code></pre><h2 id="注意项"><a href="#注意项" class="headerlink" title="注意项"></a>注意项</h2><p>   templateLoaderPath路径需要设置正确，不然会报不能加载视图错误</p>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/05/22/微信公众号/" data-id="cjiplmj620005t8dg27d637k1" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/06/22/freemarker/" data-id="cjiplmj5n0001t8dg8uiqcs0d" class="article-share-link">Share</a>
       
       
     </footer>
@@ -99,19 +122,10 @@
     
 <nav id="article-nav">
   
-    <a href="/2018/06/04/picture/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          picture
-        
-      </div>
-    </a>
   
-  
-    <a href="/2018/05/10/我的博客/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2018/06/13/date转json格式/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">我的博客</div>
+      <div class="article-nav-title">date转json格式</div>
     </a>
   
 </nav>
